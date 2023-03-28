@@ -15,9 +15,9 @@ Metadata:
       
 Parameters:
 
-  SubnetIdForALB:
-    Description: Please select the subnet IDs where you want to put your ALB. They should be public
-    Type: 'List<AWS::EC2::Subnet::Id>'
+  # SubnetIdForALB:
+  #   Description: Please select the subnet IDs where you want to put your ALB. They should be public
+  #   Type: 'List<AWS::EC2::Subnet::Id>'
 
   SubnetIdForContainer:
     Description: Please select the subnet IDs where you want to put your containers. They should be private
@@ -43,19 +43,19 @@ Parameters:
     Type: Number
     Description: Container port of app requiring ELB exposure
     Default: '80'
-  LionAccoundID:                                  # Added during presentation
-      Type: 'AWS::SSM::Parameter::Value<String>' 
-      Default: /LionAccountID
+  # LionAccoundID:                                  # Added during presentation
+  #     Type: 'AWS::SSM::Parameter::Value<String>' 
+  #     Default: /LionAccountID
 
   # CloudFrontdistribution:
   #   Type: 'AWS::SSM::Parameter::Value<String>'
   #   Description: This is the cloudfront distro
   #   Default: /CloudFrontDistribution
 
-  CloudFrontdistributionDomainName:
-    Type: 'AWS::SSM::Parameter::Value<String>'
-    Description: This is the cloudfront distribution domaine name
-    Default: /CloudfrontDomaineName
+  # CloudFrontdistributionDomainName:
+  #   Type: 'AWS::SSM::Parameter::Value<String>'
+  #   Description: This is the cloudfront distribution domaine name
+  #   Default: /CloudfrontDomaineName
 
   MyHostedZoneId:
     Type: 'AWS::SSM::Parameter::Value<String>'
